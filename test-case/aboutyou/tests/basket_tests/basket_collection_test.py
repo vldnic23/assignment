@@ -36,7 +36,8 @@ class TestBasketCollections:
 
         # Navigate to basket and get all the previously added items
         basket_items = self.header.navigate_to_basket().get_basket_items()
-
+        basket_items.reverse()
+        
         # Assert that the items added in the basket
         # are the same as the filtered ones
         for index, basket_item in enumerate(basket_items):
